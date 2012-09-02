@@ -1,0 +1,368 @@
+/* 
+
+		e[ad] - EGGL
+		Taller de Investigaciones Gráficas 2012
+
+		Tipografía
+
+*/
+* {
+	font-family: @tipografia;
+}
+
+	
+body{
+	#gradient > .striped(lighten(@gris-claro, 17%), -90deg);
+	background-repeat: repeat-x;
+	background-image: url(../fotos/fondo-1.png);
+	background-attachment:fixed;
+
+
+}
+
+a{
+	color: @rojo;
+	text-decoration: none;
+	&:hover{
+		background-color: @blanco;
+		text-decoration: underline;
+	}
+	&:visited{
+		
+		text-decoration: line-through;
+	}
+}
+
+p {
+  margin-bottom: @interlinea;
+  line-height: @interlinea;
+  color: fade(@negro, 60%);
+
+  &.grande{
+  	font-size: @cuerpo * 1.5;
+	color: @gris;
+	line-height: 100%;
+	padding: 0;
+  }
+  &.chico {
+    font-size: @cuerpo*.80;
+    line-height: @interlinea * .6;
+    color: fade(@negro, 45%);
+  }
+  &.poema{
+  	font-family: @serif;
+  	font-size: @cuerpo - 2;
+  	line-height: @interlinea;
+	white-space: pre;
+	color: fade(@negro, 80%);
+  }
+  
+  
+  &.cronica{
+  	font-size: @cuerpo * .90;
+  	line-height: @interlinea * .8;
+    color: fade(@negro, 60%);
+    text-align:left;
+	}
+  
+  &.pucv{
+  	font-size: @cuerpo * .55;
+    line-height: @interlinea * .4;
+    color: fade(@negro, 45%);
+    
+  
+    }
+    
+    &.hora {
+	  line-height: 1%;
+	  text-align: right; 
+	  margin-top: -10px;
+  } 
+	
+  }
+
+div.poema{
+	margin-bottom: @interlinea;
+	line-height: @interlinea;
+    font-family: @serif;
+  	font-size: @cuerpo - 2;
+  	line-height: @interlinea;
+	white-space: pre;
+	color: fade(@negro, 80%);
+}
+
+&.fecha{
+	  font-size: @cuerpo *.70;
+	  line-height: @interlinea * .4;
+	  color: @gris-claro;
+	  
+  }
+  
+&.evento{
+	  font-size: @cuerpo *.80;
+	  line-height: @interlinea * .5;
+	  color:fade(@negro, 60%) ;
+	  text-align: center;
+	  
+  }
+
+&.tweet{
+	  font-size: @cuerpo *.80;
+	  line-height: @interlinea * .5;
+	  color: fade(@azul, 60%) ;
+	  text-align: left;
+	  
+	  
+  }  
+  
+&.lado{
+	font-size: @cuerpo *.80;
+	line-height: @interlinea * .7;
+	color: gris-claro;
+}  
+
+&.ver-mas{
+	font-size: @cuerpo *.80;
+	line-height: 0;
+	color: gris-claro;
+	text-align: right;
+}
+
+
+
+// Cabeceras
+// --------
+
+h1, h2, h3, h4, h5, h6 {
+
+	font-weight: bold;
+	color: @gris-oscuro;
+	margin: 0 0 @interlinea 0;
+	vertical-align: bottom;
+	
+	&.filete{
+		margin: 0 -@interColumna;
+		padding: 0 @interColumna;
+		border-bottom: 1px solid @borde;
+		.clearfix;
+	}
+	
+	
+	&.titular{
+		font-size: 18px;
+		line-height: @interlinea;
+		color: @negro;
+		font-weight:normal !important;
+		border-top: @gris-claro !important;
+  }
+  
+  	&.noticia{
+		 font-size: 16px; 
+		 line-height: @interlinea *.6;
+		 color: @negro;
+		 font-weight:normal !important;	
+  	}
+  
+  	&.lateral{
+	  font-size: 14px;
+	  font-variant: small-caps;
+	  line-height: @interlinea *;
+	  border-top: 1px dotted @gris-claro;
+	  border-bottom: 1px dotted @gris-claro;
+	  font-weight: normal !important;
+	  padding: 0;
+	  text-align: center;
+  }
+  
+  &.sidebar{
+	  font-size: 14px;
+	  font-variant: small-caps;
+	  line-height: @interlinea;
+	  border-top:  dotted thin @gris;
+	  border-bottom: dotted thin @gris;
+	  font-weight: normal !important;
+  }
+  
+  &.agenda{
+  	  font-size: @cuerpo *.80;
+  	  color:@rojo;
+  	  background-color: fade(@ahuesado, 50%);
+	  font-variant: uppercase;
+	  line-height: @interlinea;
+	  font-weight: normal !important;
+	  text-align: center;
+	 
+	  
+	  
+  }
+  
+    &.evento {
+	  font-size: 16px;
+	  color:@gris;
+	  font-weight: normal !important;
+	  padding-left: 15px;
+	  padding-right: 15px;
+  }	
+  
+ 
+}
+
+h1 {font-size: 32px;}
+h2 {font-size: 28px;}
+h3 {font-size: 22px;}
+h4 {font-size: 18px;}
+h5 {font-size: 16px;}
+h6 {font-size: 14px;}
+
+// Listas
+ul, ol {
+  margin: 0 0 @interlinea 12px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+ul {
+  list-style: disc;
+  font-size: @cuerpo * .80%;
+  color:@rojo;
+  
+  
+}
+ol {
+  list-style: decimal;
+}
+li {
+  line-height: @interlinea *.7;
+  color: @rojo; /*este es el color del disc*/
+}
+
+// Description Lists
+dl {
+	margin-bottom: @interlinea;
+	dt, dd {
+		line-height: @interlinea;
+		}
+	dt {
+		font-weight: bold;
+		}
+	dd {
+		margin-left: @interlinea / 2;
+		}
+}
+
+// Otros
+
+// Regla horizontal
+hr {
+  margin: 20px 0 19px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+
+// Émfasis
+strong {
+  font-style: inherit;
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.muted {
+  color: @gris-claro;
+}
+
+// Blockquotes
+blockquote {
+  margin-bottom: @interlinea;
+  border-left: 5px solid #eee;
+  padding-left: 15px;
+  
+  
+  small {
+    display: block;
+    color: @gris-claro;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+// Dirección
+address {
+  display: block;
+  line-height: @interlinea;
+  margin-bottom: @interlinea;
+}
+
+// código
+code, pre {
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  font-size: @font-size *.666;
+  .border-radius(3px);
+  color: fade(@negro, 50%);
+}
+
+code {
+	display: inline-block;
+	line-height: @interlinea * .666;
+	white-space: pre;
+	background-color: @ahuesado;
+	padding: 0 1ex 0 1ex;
+	.box-shadow(inset 0 0 1px darken(@ahuesado, 30%));
+}
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: (@interlinea - 1) / 2;
+  margin: 0 0 @interlinea;
+  line-height: @interlinea;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  .border-radius(3px);
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+}
+
+.global{
+	width: @anchoTotal;
+	-moz-column-count: 3;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 20px;
+	column-count: 3;
+	column-gap: 20px;
+}
+
+.big{
+	color: @gris-claro;
+	margin: -@em 0 0 0;
+	
+}
+.main{
+	color: @link-color;
+	font-size: @font-size * 3;
+}
+.tdc{
+	padding: @em @em*2;
+	color: @gris;
+	background-color: @ahuesado;
+	.border-radius(1em / 5);
+	margin: 1em 0;
+}
+
+
+//------------------------------------------------------Estilos Semánticos
+
+
+.estracto{
+	.chico;
+}

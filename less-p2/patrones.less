@@ -1,0 +1,229 @@
+/* 
+
+		e[ad] - EGGL
+		Taller de Investigaciones Gráficas 2012
+
+		Patrones
+
+*/
+
+
+
+header .iso{
+	margin: 0 0 0 @interColumna;
+
+	h1{
+		.rojo;
+		font-size: 18px;
+	}
+
+	h2{
+		.margen-superior-negativo;
+		.gris;
+		.fino;
+		font-size: 18.5px;
+	}
+}
+
+ul.meta{
+
+	top: 0;
+	vertical-align: top;
+	text-align: right;
+	font-size: @cuerpo *.70;
+	margin: -@interColumna 0 @interColumna/2 0;
+	padding: 0 20px;
+	margin-top: none;
+	
+	li{
+		display: inline;
+		border-right: 1px solid @borde;
+		padding: 0 10px;
+		&:last-of-type{
+			border: none;
+		}
+			a{
+				font-weight: bold;
+			}
+	}
+}
+
+.pizarra{
+	background-color: @pizarra;
+	color: fade(@blanco, 80%);
+	* {
+		color: fade(@blanco, 80%);
+		font-weight: 100;
+	}
+	
+	a{
+		color: @color-opuesto;
+	}
+	a:hover{
+		background-color: fade(@color-opuesto, 10%);
+	}
+
+}
+
+nav{
+	
+	position:relative;
+	margin: 0 auto; 
+	top: 0;
+	right: 0;
+	padding: 0;
+	background-color: fade(@ahuesado, 90%);
+	width: @anchoTotal;
+	z-index: 2;
+	
+	
+	ul, ol {
+		margin: auto;
+		margin-top:0px;
+		padding: auto ;
+		list-style: none;
+		margin-right: auto;
+		margin-bottom: 0px;
+		.sombra;
+		
+		.clearfix;
+		&.menu{
+			height: 43px;
+		}
+		
+	}
+	
+	
+	li {    
+		
+	  border: none;
+	  float: left; 
+	  display: inline;
+	  list-style: none;
+	  position: relative;
+	  height: 15px;
+	  padding-bottom:25px;
+	  /*border-right:1px solid @gris-claro;
+	  &:last-of-type{ border: none; }*/
+	  font-size:10px;
+	  
+	  
+	  
+	  
+	  li:hover {
+	  	background-color: @blanco;
+	  	color: @gris;
+	  	
+	  	
+	  	
+	  
+	  
+	  }
+	  	ul {
+		width: 200px;
+	  	list-style: none;
+	  	display: none;
+	  	position: absolute;
+	  	top: auto;
+	  	left: 0px;
+	  	background: @blanco;
+	  	
+	  		li { 
+  			width: 200px;
+  			float: left; 
+  			display: compact !important;
+  			border-right: none !important;
+  			border-bottom: 0.2px dotted @gris-claro;
+  			font-size: 8px;
+  			bottom: auto !important;
+  			background-color: fade(@gris-claro, 20%);
+  			}
+  		}
+	  }
+	  
+	  li:hover {
+	  
+	  	ul{display: inline-block;}
+	  	background-color: @ahuesado;
+	  	.sombra-foco;	  	
+	  }
+	  
+	  a {
+  		padding: 15px 15px 15px;
+  		float: none !important; 
+  		float: left; 
+  		display: block;
+  		color: @rojo;
+  		text-decoration: none;
+  		font-weight: bold;
+  		font-family: Lato, sans-serif;
+  		height: auto !important;
+  		text-transform: uppercase;
+	  	}
+
+	  	a:hover{
+		  	
+		  	text-decoration: inherit;
+		  	background-color: transparent;
+		  	
+		
+		  	
+	  	}
+
+}
+
+footer{
+	
+	background-color: transparent;
+	margin: 0 auto;
+	padding: 0;
+	line-height: @interlinea * .7;
+	
+	p{
+		border-top: 1px solid @borde;
+		padding-top: @cuerpo; 
+		font-size: @cuerpo*.7;
+		letter-spacing: inherit;
+		
+		img{
+			display: inline-block;
+			margin-bottom: -4px;
+		}
+	}
+	
+	address{
+		font-size: @cuerpo * .7;
+		line-height: inherit;
+	}
+	
+	nav{
+		border: none;
+		line-height: inherit;
+		
+		
+		
+		ul{
+			background-color: transparent !important;
+
+			li{
+				border: none;
+				margin-left: @interColumna;
+				
+				
+				a{
+					font-size: @cuerpo * .6.9;
+					padding: 4px 10px 4px 10px;
+					text-transform: none;
+					background-color: none;
+					.border-radius(4px);
+					}
+				a:hover{
+					background-color: transparent !important;
+					font-size: @cuerpo * .8;
+				  	color:@rojo;
+				  
+			  	}
+			}
+		}
+	}
+}

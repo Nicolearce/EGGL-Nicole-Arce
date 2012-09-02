@@ -1,0 +1,193 @@
+/*
+
+	Elementos de Interacción:
+	
+	Botones, formularios
+
+
+*/
+
+*{
+	.transition(.5s ease all);
+}
+
+@radio:	1px;	// esquina redondeada de botones
+
+button.btn,
+input[type="submit"],
+a.btn
+ {
+	display: inline-block;
+	margin-top: -4px;
+	cursor: pointer;
+	white-space: nowrap;
+	font-size: @cuerpo*.8;
+	padding:middle;
+	color: fade(@negro, 40%);
+	text-align: center;
+	vertical-align: middle;
+	.sombra;
+	/*#gradient > .vertical-three-colors(lighten(@gris-claro, 22%), lighten(@gris-claro, 14%), 80%, lighten(@gris-claro, 8%));*/
+	border: 1px solid @borde;
+
+	.border-radius(@radio);
+	.box-shadow(inset fade(@blanco, 80%) 1px 1px 1px);
+	
+	&:hover {
+	text-decoration: none;
+	#gradient > .vertical-three-colors(lighten(@gris-claro, 20%), lighten(@gris-claro, 10%), 50%, lighten(@gris-claro, 5%));
+	.box-shadow(inset fade(@negro, 20%) 0 0 4px);
+	}
+	&.mini{
+		font-size: @cuerpo * .55;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 3px 4px;
+	}
+  
+	&.grande{
+		font-size: @cuerpo;
+		padding: @cuerpo/2 @cuerpo;
+		}
+	&.gigante{
+		font-size: @cuerpo;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: @cuerpo @cuerpo*2;
+	}
+	&.accion{
+		color: @ahuesado;
+		text-shadow: 1px 1px 0 fade(@negro, 70%);
+		border-color: fade(@celeste, 20%);
+		
+		#gradient > .vertical(@celeste, @azul);
+		.box-shadow(inset fade(@blanco, 40%) 1px 1px 1px);
+		&:hover{
+			#gradient > .vertical(darken(@negro, 10%), darken(@azul, 10%));
+			.box-shadow(inset fade(@negro, 40%) 1px 1px 10px);
+		}
+	
+	}
+	
+	&.alerta{
+		color: @blanco;
+		text-shadow: 1px 1px 0 fade(@negro, 40%);
+		border-color: fade(@rojo-oscuro, 20%);
+		
+		#gradient > .vertical(lighten(@rojo, 35%), @rojo);
+		.box-shadow(inset fade(@blanco, 40%) 1px 1px 1px);
+		&:hover{
+			#gradient > .vertical(@rojo, darken(@rojo, 10%));
+			.box-shadow(inset fade(@negro, 40%) 1px 1px 10px);
+		}
+	
+	}
+}
+
+
+.pegado-antes{.border-radius(@radio 0 0 @radio)}
+.pegado-despues{.border-radius(0 @radio @radio 0)}
+
+/* Formularios *///---------------------------------------------------------------------------------------------------
+
+// Reset
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: @interlinea + @cuerpo;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: @cuerpo;
+  line-height: @interlinea;
+  color: @gris;
+}
+
+
+
+form{
+	input[type="submit"],
+	.btn{margin-top: @interColumna/2;
+		margin-left: 15px;
+		margin-top: 9px;
+	}
+	
+	label{
+		color: @gris-oscuro;
+		font-weight: bold;
+		font-size: @cuerpo * .75;
+		text-shadow: -1px -1px 1px fade(@blanco, 60%);
+	}
+	
+	input{
+		padding: 5px;
+		color: fade(@negro, 90%);
+		border: none;
+	
+		.border-radius(4px);
+		.sombra;
+		&:focus{
+			.sombra-foco;
+			.bg-ahuesado;
+		}
+	}
+	&.buscador{
+		text-align: left;
+		input.texto{
+			.pegado-antes;
+			margin-left: 30px;
+			margin-top: 9px;
+			width: 130px;
+			padding: middle;
+			font-size: 75%;
+			
+			}
+		input[type=submit]{
+			.pegado-despues;
+			margin: -4px 0 0 -4px;
+			padding:3px ;
+			margin-top: auto;
+			margin-bottom: : auto;
+			padding: middle;
+			
+
+			
+			}
+				
+		}
+	
+	&.vertical{
+		label{
+			display: block;
+			margin: @interlinea 0 5px 5px;
+		}
+	}
+	&.horizontal{
+		label{
+			display: inline-block;
+			width: @bloque * 4;
+			text-align: right;
+		}
+		
+	}
+	input.derecha{margin-right: -6px;
+		
+	}
+	.clearfix;
+	.margen-inferior;
+}
